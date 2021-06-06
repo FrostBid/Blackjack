@@ -1,2 +1,2 @@
 # Testing
-Testingonly
+This project is mainly for testing purposes only.
