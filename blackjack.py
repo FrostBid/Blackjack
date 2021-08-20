@@ -58,8 +58,6 @@ class Hand:
             self.aces -= 1
 
 
-
-
 class Chips:
     
     def __init__(self):
@@ -89,14 +87,10 @@ def take_bet(chips):
                 break
 
 
-
-
 def hit(deck,hand):
     single_card = deck.deal()
     hand.add_card(single_card)
     hand.adjust_for_ace()
-
-
 
 
 def hit_or_stand(deck,hand):
@@ -118,8 +112,6 @@ def hit_or_stand(deck,hand):
         break
 
 
-
-
 def show_some(player,dealer):
     print("\nDealer's Hand:")
     print(" <card hidden>")
@@ -131,7 +123,6 @@ def show_all(player,dealer):
     print("Dealer's Hand =",dealer.value)
     print("\nPlayer's Hand:", *player.cards, sep='\n ')
     print("Player's Hand =",player.value)
-
 
 
 def player_busts(player,dealer,chips):
@@ -152,8 +143,6 @@ def dealer_wins(player,dealer,chips):
     
 def push(player,dealer):
     print("Dealer and Player tie! It's a push.")
-
-
 
 
 while True:
@@ -199,7 +188,6 @@ while True:
         while npc.value < 17:
             hit(thedeck,npc)
                 
-    
         # Show all cards
         show_all(theplayer,npc)
         # Run different winning scenarios
